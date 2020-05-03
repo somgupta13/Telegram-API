@@ -53,7 +53,7 @@ else{
 			phone_number   : phone,
 			phone_code_hash: phone_code_hash,
 			phone_code     : result.username
-		}).then(result => {
+		},{setAuth:false}).then(result => {
 			console.log("Logged:", result);
 			console.log("Logged:", result.user);
 			//  mtproto.call('messages.sendMessage',{
