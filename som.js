@@ -1,9 +1,10 @@
 const { MTProto } = require('@mtproto/core');
 const prompt = require('prompt');
-
+const api_id= 105;
+const api_hash= '85b72864f343b7346733c847';
 const mtproto = new MTProto({
-api_id: 105,
-api_hash: '85b72864f343b7346733c847',
+api_id=api_id,
+api_hash=api_hash,
 
 test: false,
 });
@@ -15,8 +16,8 @@ const code = '2222';
 function sendCode(phone) {
 console.log("hello");
 return mtproto.call('auth.sendCode', {
-api_id: 1056,
-api_hash: '85b72864f343b7346733c8472',
+api_id=api_id,
+api_hash=api_hash,
 	// current_number: false,
 phone_number: phone,
 settings: {
