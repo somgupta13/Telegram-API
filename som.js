@@ -44,7 +44,7 @@ f1(result.phone_code_hash);
 
 async function f1(phone_code_hash){
 prompt.start();
-await prompt.get(['username'], async function (err, result) {
+await prompt.get(['code'], async function (err, result) {
 if (err) { console.log(err); }
 else{
 // console.log(phone,phone_code_hash,result.username);
@@ -53,7 +53,7 @@ else{
  		const { user } = await mtproto.call('auth.signIn', {
 			phone_number   : phone,
 			phone_code_hash: phone_code_hash,
-			phone_code     : result.username
+			phone_code     : result.code
 		},{setAuth:false}).then(result => {
 			console.log("Logged:", result);
 			console.log("Logged:", result.user);
